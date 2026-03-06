@@ -7,6 +7,7 @@ import SuitabilityMap from "@/components/dashboard/SuitabilityMap";
 import Roadmap from "@/components/dashboard/Roadmap";
 import Governance from "@/components/dashboard/Governance";
 import { Eye } from "lucide-react";
+import DarkModeToggle from "@/components/dashboard/DarkModeToggle";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -19,13 +20,16 @@ const Index = () => (
           </div>
           <span className="font-bold text-foreground text-sm">CV Operations</span>
         </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#estate" className="hover:text-foreground transition-colors">Estate</a>
-          <a href="#inflight" className="hover:text-foreground transition-colors">In-Flight</a>
-          <a href="#lessons" className="hover:text-foreground transition-colors">Lessons</a>
-          <a href="#vendors" className="hover:text-foreground transition-colors">Vendors</a>
-          <a href="#roadmap" className="hover:text-foreground transition-colors">Roadmap</a>
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
+            <a href="#estate" className="hover:text-foreground transition-colors">Estate</a>
+            <a href="#inflight" className="hover:text-foreground transition-colors">In-Flight</a>
+            <a href="#lessons" className="hover:text-foreground transition-colors">Lessons</a>
+            <a href="#vendors" className="hover:text-foreground transition-colors">Vendors</a>
+            <a href="#roadmap" className="hover:text-foreground transition-colors">Roadmap</a>
+          </nav>
+          <DarkModeToggle />
+        </div>
       </div>
     </header>
 
